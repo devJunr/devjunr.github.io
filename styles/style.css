@@ -2,6 +2,7 @@
     --cor-primaria: #000000;
     --cor-secundaria: #DE15FF;
     --cor-terciaria: #24FF00;
+    --cor-alerta: #ff0000;
     --fonte-padrao: 'Courier New', Courier, monospace
 }
 
@@ -125,11 +126,39 @@ body{
     cursor: pointer;
 }
 
+.alerta_disp_movel{
+    display: none;
+    color: var(--cor-alerta);
+}
+
 .rodape{
     border: 3px solid var(--cor-secundaria);
     color: var(--cor-terciaria);
     text-align: center;
-    
+    margin-top: 70px;
     bottom: 0;
     width: 99.5%;
+}
+
+@media (max-width:1000px){
+    .selecionar_linguagem{
+        display: inline;
+    }
+    
+    .selecionar_linguagem_botao{
+        width: 300px;
+        margin-top: 50px;
+    }
+
+    .alerta_disp_movel{
+        display: block;
+        padding: 20px;
+    }
+
+    .conteudo_desafios{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
