@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Dev. Adriano</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js" defer></script>
+    <meta name="description" content="Adriano: Um repositório de testes e códigos em diversas linguagens de programação, incluindo JavaScript, CSS, Java e HTML, para ajudar novos programadores.">
+    <meta name="keywords" content="programação, desafios, JavaScript, CSS, Java, HTML, códigos, testes, novos programadores, Adriano Júnior,Adriano Júnior Desenvolvedor, Adriano Júnior Programador">
+    <meta name="author" content="Adriano">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#00ff0a">
+    <link rel="icon" href="../assets/logo/ico-broken-with-a.png" type="image/png">
+    <style>
+        .error-mensagem-alerta{
+            margin: 12.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <section class="cabecalho__titulo">
+            <h1 class="cabecalho__titulo__h1" id="titulo_cabecario">ERRO</h1>
+        </section>
+        <nav class="cabecalho__opcoes">
+            <a onclick="irInicio()" class="cabecalho__opcoes_btn" href="../index.html">Inicio</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <section class="error-mensagem-alerta">
+            <div id="mensagem"></div>
+        </section>
+            
+    </main>
+
+    <footer class="rodape">
+        <h4 class="rodape__copy">Copyright © 2024 - Adriano</h4>
+        <h6>V.2</h6>
+    </footer>
+
+
+    <script>
+        // Função para obter o valor do parâmetro da URL
+        function getParameterByName(name) {
+            const url = window.location.href;
+            name = name.replace(/[$$$$]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Obtém o valor do parâmetro 'error'
+        const errorCode = getParameterByName('error');
+
+        // Exibe a mensagem na página, se o código de erro existir
+        if (errorCode) {
+            document.getElementById('mensagem').innerText = `Erro: ${errorCode}`;
+        } else {
+            document.getElementById('mensagem').innerText = 'Um erro foi encontrado, porém, nenhum código foi repassado';
+        }
+    </script>
+
+</body>
+</html>
