@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="tituloPagina">Error - Dev. Adriano</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/error-style.css">
     <script src="../scripts/script.js" defer></script>
     <meta name="description" content="Adriano: Um repositório de testes e códigos em diversas linguagens de programação, incluindo JavaScript, CSS, Java e HTML, para ajudar novos programadores.">
     <meta name="keywords" content="programação, desafios, JavaScript, CSS, Java, HTML, códigos, testes, novos programadores, Adriano Júnior,Adriano Júnior Desenvolvedor, Adriano Júnior Programador">
@@ -13,11 +14,6 @@
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#00ff0a">
     <link rel="icon" href="../assets/logo/ico-broken-with-a.png" type="image/png">
-    <style>
-        .error-mensagem-alerta{
-            margin: 12.5rem;
-        }
-    </style>
 </head>
 
 <body>
@@ -31,8 +27,31 @@
     </header>
 
     <main class="conteudo">
+
         <section class="error-mensagem-alerta">
-            <div id="mensagem"></div>
+            <div class="error-mensagem-alerta__campo">
+                <pre>
+                                           \ / _
+                                      ___,,,
+                                      \_[o o]
+     Errare humanum est!              C\  _\/
+             /                     _____),_/__
+        ________                  /     \/   /
+      _|       .|                /      o   /
+     | |       .|               /          /
+      \|       .|              /          /
+       |________|             /_        \/
+       __|___|__             _//\        \
+ _____|_________|____       \  \ \        \
+                    _|       ///  \        \
+                   |               \       /
+                   |               /      /
+                   |              /      /
+ ________________  |             /__    /_
+ b'ger        ...|_|.............. /______\.......
+                </pre>
+                <h2 class="error-mensagem-alerta__campo_code" id="mensagem"></h2>
+            </div>
         </section>
             
     </main>
@@ -60,17 +79,23 @@
 
 
         // Imprime o erro no titulo da página
+        if(errorCode == null){
+            let tituloPage = document.getElementById('tituloPagina');
+            tituloPage.innerHTML = `Erro - Dev. Adriano `;
+        }else if(errorCode != null){
+            let tituloPage = document.getElementById('tituloPagina');
+            tituloPage.innerHTML = `Erro: ${errorCode} - Dev. Adriano `;
+        }
         
-        let tituloPage = document.getElementById('tituloPagina');
-        tituloPage.innerHTML = `Erro: ${errorCode} - Dev. Adriano `;
 
         // Exibe a mensagem na página, se o código de erro existir
         if (errorCode) {
-            document.getElementById('mensagem').innerText = `Erro: ${errorCode}`;
+            document.getElementById('mensagem').innerText = `${errorCode}`;
         } else {
             document.getElementById('mensagem').innerText = 'Um erro foi encontrado, porém, nenhum código foi repassado';
+            document.getElementById('mensagem').style.fontSize="30px";
+            document.getElementById('mensagem').style.margin="30px";
         }
     </script>
-
 </body>
 </html>

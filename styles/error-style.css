@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+.error-mensagem-alerta{
+    margin: 1rem;
+}
+
+.error-mensagem-alerta__campo_code{
+    font-size: 7rem;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: -32px;
+}

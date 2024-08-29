@@ -95,13 +95,12 @@ body{
 .conteudo_desafios{
     display: flex;
     flex-wrap: wrap;
-
 }
 
 .conteudo_desafios_desafio{
     border: 2px solid var(--cor-secundaria);
     width: 400px;
-    margin: 20px;
+    margin: 10px;
     padding: 5px;
 }
 
@@ -138,6 +137,9 @@ body{
     margin-top: 70px;
     bottom: 0;
     width: 99.5%;
+    position: fixed;
+    background-color: #000000;
+    
 }
 
 @media (max-width:1000px){
