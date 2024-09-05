@@ -4,81 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pop-up com Desfoque de Fundo</title>
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Estilo básico da página */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Container para o conteúdo */
-.conteudo {
-    padding: 20px;
-    transition: filter 0.3s; /* Transição suave para o desfoque */
-}
-
-/* Classe para aplicar o desfoque */
-.conteudo.blurred {
-    filter: blur(5px); /* Aplica o desfoque */
-}
-
-/* Estilo básico do pop-up */
-#meuPopup {
-    position: fixed;
-    bottom: 20px; /* Alinhado na parte inferior */
-    left: 20px; /* Alinhado na parte esquerda */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* Garante que o pop-up esteja acima de todo o conteúdo */
-    display: none; /* Escondido por padrão */
-}
-
-#meuPopup button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#meuPopup button:hover {
-    background-color: #45a049;
-}
-
-/* Fundo escurecido (opcional) */
-#fundoEscuro {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo escura com opacidade */
-    z-index: 999; /* Colocado logo abaixo do pop-up */
-    display: none;
-}
-
-    </style>
+    
 </head>
 <body>
+    <header class="cabecalho">
+        <section class="cabecalho__titulo">
+            <h1 class="cabecalho__titulo__h1" id="titulo_cabecario">Adriano</h1>
+        </section>
+        <nav class="cabecalho__opcoes">
+            <button onclick="irInicio()" class="cabecalho__opcoes_btn" href="#">Inicio</button>
+            <a class="cabecalho__opcoes_op" href="desafios/">Desafios</a>
+            <button onclick="irSobre()" class="cabecalho__opcoes_btn" href="#">Sobre</button>
+        </nav>
+    </header>
 
+    <main class="conteudo">
+        <p class="alerta_disp_movel">Você está acessando esta página por meio de um dispositivo móvel. Este site foi otimizado para visualização em dispositivos móveis, porém, algumas funções podem não operar corretamente.</p>
+
+        <p id="texto_paragrafo_conteudo" class="conteudo__paragrafo">Este site tem como finalidade armazenar uma variedade de testes realizados em diferentes linguagens de programação, visando proporcionar um recurso valioso para futuros usuários. Além disso, busca-se oferecer suporte e orientação a novos programadores, facilitando seu aprendizado e desenvolvimento.</p>
+
+        <section id="funcao_selecionar_linguagens" class="selecionar_linguagem">
+            <div class="selecionar_linguagem_menu">
+                <button onclick="redirecionarPgithubTopic()" class="selecionar_linguagem_botao"><h1>JS</h1>
+                </button>
+                <p>Códigos com JS </p>
+            </div>
+            
+            <div class="selecionar_linguagem_menu">
+                <button onclick="redirecionarPgithubTopic()" class="selecionar_linguagem_botao"><h1>CSS</h1>
+                </button>
+                <p>Códigos com CSS</p>
+            </div>
+            
+            <div class="selecionar_linguagem_menu">
+                <button onclick="redirecionarPgithubTopic()" class="selecionar_linguagem_botao"><h1>JAVA</h1>
+                </button>
+                <p>Códigos com Java</p>
+            </div>
+            
+            <div class="selecionar_linguagem_menu">
+                <button onclick="redirecionarPgithubTopic()" class="selecionar_linguagem_botao"><h1>HTML</h1>
+                </button>
+                <p>Códigos com HTML</p>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <h4>Copyright © 2024 - Adriano</h4>
+        <h6>V.2.1.1</h6>
+    </footer>
     <!-- Fundo escurecido -->
-    <div id="fundoEscuro"></div>
-
-    <!-- Conteúdo principal da página -->
-    <div class="conteudo">
-        <h1>Minha Página</h1>
-        <p>Este é o conteúdo da página que será desfocado quando o pop-up estiver visível.</p>
+    <div id="fundoEscuro">
+        
     </div>
 
     <!-- Estrutura do Pop-up -->
     <div id="meuPopup">
-        <p>Bem-vindo ao site! Este é o seu pop-up.</p>
-        <button onclick="fecharPopup()">Fechar</button>
+        <p>Vai um cookie ?</p>
+        <button onclick="fecharPopup()">Sim, claro</button>
+        <button class="popUp-botao-nao" onclick="fecharPopup()">Não, <a href="#">pra que serve?</a></button>
+        <img class="cookie-popup-ico" src="../assets/logo/cookie.png" alt="">
+
     </div>
 
     <script>

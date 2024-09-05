@@ -1,0 +1,6 @@
+ErrorDocument 400 https://adrianojr.online/error/?error=400
+ErrorDocument 401 https://adrianojr.online/error/?error=401
+ErrorDocument 403 https://adrianojr.online/error/?error=403
+ErrorDocument 404 https://adrianojr.online/error/?error=404
+ErrorDocument 500 https://adrianojr.online/error/?error=500
+ErrorDocument 503 https://adrianojr.online/error/?error=503

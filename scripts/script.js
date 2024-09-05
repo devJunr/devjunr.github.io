@@ -9,7 +9,7 @@ function irInicio(){
         botoes.style.display = 'flex'; // Para PC
     }
     let sobre = document.getElementById('texto_paragrafo_conteudo');
-    sobre.innerHTML = `Este site tem como finalidade armazenar uma variedade de testes realizados em diferentes linguagens de programação, visando proporcionar um recurso valioso para futuros usuários. Além disso, busca-se oferecer suporte e orientação a novos programadores, facilitando seu aprendizado e desenvolvimento.`;
+    sobre.innerHTML = `Este site tem como principal finalidade armazenar uma ampla variedade de testes realizados em diferentes linguagens de programação, focados em estudos e análises pessoais. O objetivo é manter um registro organizado desses testes, servindo como um repositório privado para futuras consultas e comparações dentro de projetos específicos.`;
     sobre.style.margin = "3.125rem";
 }
 
