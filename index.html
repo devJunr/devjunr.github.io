@@ -2,57 +2,114 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev. Adriano</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <script src="scripts/script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Adriano: Um repositório de testes e códigos em diversas linguagens de programação, incluindo JavaScript, CSS, Java e HTML, para ajudar novos programadores.">
-    <meta name="keywords" content="programação, desafios, JavaScript, CSS, Java, HTML, códigos, testes, novos programadores">
-    <meta name="author" content="Adriano">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#00ff0a">
-    <link rel="icon" href="assets/logo/ico.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adriano Júnior</title>
+  <link rel="stylesheet" href="assets/styles/global/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="shortcut icon" href="assets/imagens/logo.png" type="image/x-icon">
 </head>
 
 <body>
-    <header class="cabecalho">
-        <section class="cabecalho__titulo">
-            <h1 class="cabecalho__titulo__h1" id="titulo_cabecario">Adriano</h1>
-        </section>
-        <nav class="cabecalho__opcoes">
-            <button onclick="irInicio()" class="cabecalho__opcoes_btn" href="#">Inicio</button>
-            <a class="cabecalho__opcoes_op" href="desafios/">Desafios</a>
-            <button onclick="irSobre()" class="cabecalho__opcoes_btn" href="#">Sobre</button>
-        </nav>
-    </header>
+  <div class="alert alert-danger">
+    <p>O site está passando por mudanças de layout, pode ocorrer bugs e falta de funções</p>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img width="60px" src="assets/imagens/logo.png" alt="Logo Site">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#capturas">Capturas</a>
+          <a class="nav-link" href="#contato">Contato</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-    <main class="conteudo">
-        <p class="alerta_disp_movel">Você está acessando esta página por meio de um dispositivo móvel. Este site foi otimizado para visualização em dispositivos móveis, porém, algumas funções podem não operar corretamente.</p>
+  <div class="container my-5">
+    <h1>Adriano Júnior</h1>
+    <h5 class="text-body-secondary">Desenvolvedor Full Stack</h5>
+    <h2 class="mt-5">
+      Atuo principalmente com o desenvolvimento de aplicações web utilizando
+      tecnologias como HTML, CSS, bootstrap, NextJS e outras.
+    </h2>
+    <button class="btn btn-primary mt-4">Fale comigo</button>
+    <div class="row mt-5">
+      <div class="col">
+        <p>Estudo e atuo como programador, porém, tenho interesse em áreas como fotografia, astronomia, geek,
+          desenvolvimento 3D, realidades mistas por meio de VR, IA, e tudo que envolva a área da tecnologia
+          computacional</p>
+      </div>
+      <div class="col">
+        <p>Crio aplicações nativas com o uso de Java e Python, com consumo de algumas API e coisas do tipo, tenho o
+          plano de criar algum projeto opensource que possa estar ajudando os programadores e os não programadores, algo
+          que interliga ambas das áreas, e que caso usado de maneira correta, possa trazer algum impacto.</p>
+      </div>
+    </div>
+    <hr class="border border-primary">
+    <div class="row">
+      <h3 id="capturas" class="text-body-secondary">Capturas</h3>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1697646000981.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1697646613758.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1697657823611.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1697661313083.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="assets/imagens/blog_post/1729466009132.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1729466032493.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1729466073703.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+      <div class="col">
+        <img src="assets/imagens/blog_post/1729466088852.jpg" class="img-fluid" alt="Foto estilo polaroid">
+      </div>
+    </div>
+    <hr class="border border-primary">
+    <div id="contato" class="contato">
+      <h3>Contato</h3>
+      <section class="d-flex m-3 gap-2">
+        <i class="fa-solid fa-envelope"></i>
+        <h6>contato@adrianojr.online</h6>
+      </section>
 
-        <p id="texto_paragrafo_conteudo" class="conteudo__paragrafo">Este site tem como principal finalidade armazenar uma ampla variedade de testes realizados em diferentes linguagens de programação, focados em estudos e análises pessoais. O objetivo é manter um registro organizado desses testes, servindo como um repositório privado para futuras consultas e comparações dentro de projetos específicos.</p>
-
-        <section id="funcao_selecionar_linguagens" class="redes-container">
-            <a class="ico-rede" href="https://bsky.app/profile/adrianojr.online">
-                <i class="fa fa-brands fa-bluesky"></i>
-            </a>
-            
-            <a class="ico-rede" href="https://github.com/devJunr">
-                <i class="fa fa-brands fa-github"></i>
-            </a>
-            
-            <a class="ico-rede" href="mailto:cont@adrianojr.online">
-                <i class="fa fa-solid fa-envelope"></i>
-            </a>
-            
-        </section>
-    </main>
-    <footer class="rodape">
-        <h4>Copyright © 2024 - Adriano</h4>
-        <h6>V.2.1.1</h6>
-    </footer>
+    </div>
+  </div>
+  </div>
+  <div class="card text-center">
+    <div class="card-header">
+      Adriano J.
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Em constante evolução</h5>
+      <p class="card-text">Com novas tecnologias e soluções emergindo, meu site está em fase de aprimoramento. Enquanto
+        isso, bugs ou funções faltantes podem surgir. Fique à vontade para explorar e acompanhar as novidades!</p>
+      <a href="https://github.com/devjunr" class="btn btn-primary">Acessar meu Github</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      Última atualização: 20/10/24
+    </div>
+  </div>
 </body>
 </html>
