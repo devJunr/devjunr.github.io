@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// #Scrollbar Customization
+
+pre {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+// #Prose Customization
+
+.prose {
+  a {
+    @apply decoration-sky-600 decoration-2 underline-offset-4 transition-colors dark:decoration-sky-400;
+
+    &:hover {
+      @apply decoration-rose-600 decoration-wavy dark:decoration-rose-400;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium tracking-tight;
+
+    &::after {
+      @apply hidden pl-1 content-['#'] hover:inline-block;
+    }
+  }
+
+  #contents + ol > li a {
+    @apply no-underline;
+
+    &::after {
+      @apply hidden pl-1 content-['#'] hover:inline-block;
+    }
+  }
+
+  strong {
+    @apply font-semibold;
+  }
+}
+
+// #Custom Classes
+
+.title {
+  @apply mb-2 text-balance text-2xl font-semibold tracking-tight;
+}

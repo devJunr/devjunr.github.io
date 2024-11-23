@@ -1,0 +1,20 @@
+{
+  "favorites.resources": [
+    {
+      "filePath": "src",
+      "group": "Default"
+    },
+    {
+      "filePath": "src\\app",
+      "group": "Default"
+    },
+    {
+      "filePath": "src\\components",
+      "group": "Default"
+    },
+    {
+      "filePath": "content",
+      "group": "Default"
+    }
+  ]
+}
