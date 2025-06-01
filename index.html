@@ -13,46 +13,12 @@
     <p><a href="mailto:adrianojunr@gmail.com">adrianojunr@gmail.com</a></p>
   </header>
 
-  <main class="container">
-    <section>
-      <h2 class="section-title">Projetos</h2>
-      <div class="row" id="projects">
-        <!-- Os projetos serão inseridos aqui via JavaScript -->
-      </div>
-    </section>
-
     <!-- Contato -->
     <section>
       <h2 class="section-title">Contato</h2>
       <p>Email: <a href="mailto:adrianojunr@gmail.com">adrianojunr@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/devJunr" target="_blank">github.com/devJunr</a></p>
     </section>
-  </main>
-  <script>
-    // Função para buscar e exibir os repositórios do GitHub
-    fetch('https://api.github.com/users/devJunr/repos')
-      .then(response => response.json())
-      .then(repos => {
-        const projectsContainer = document.getElementById('projects');
-        repos.forEach(repo => {
-          const col = document.createElement('div');
-          col.className = 'col-md-4 project-card';
-          col.innerHTML = `
-            <div class="card h-100">
-              <div class="card-body">
-                <h5 class="card-title">${repo.name}</h5>
-                <p class="card-text">${repo.description || ' '}</p>
-                <a href="${repo.html_url}" class="btn btn-outline-dark" target="_blank">Ver Projeto</a>
-              </div>
-            </div>
-          `;
-          projectsContainer.appendChild(col);
-        });
-      })
-      .catch(error => {
-        console.error('Erro ao buscar repositórios:', error);
-      });
-  </script>
-
+</main>
 </body>
 </html>
